@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     echo "Building Docker image for ${BRANCH_NAME} branch..."
-                    bat "docker build -t Weather-Check-image-${BRANCH_NAME} ."
+                    bat "docker build -t weather-check-image-${BRANCH_NAME} ."
                 }
             }
         }
@@ -39,11 +39,11 @@ pipeline {
                     }
 
                     echo "Stopping and removing any existing container for ${BRANCH_NAME}..."
-                    bat "docker stop Weather-Check-container-${BRANCH_NAME} || exit 0"
-                    bat "docker rm Weather-Check-${BRANCH_NAME} || exit 0"
+                    bat "docker stop weather-check-container-${BRANCH_NAME} || exit 0"
+                    bat "docker rm weather-check-${BRANCH_NAME} || exit 0"
 
                     echo "Running new container for ${BRANCH_NAME} on port ${branchPort}..."
-                    bat "docker run --rm -d --name Weather-Check-container-${BRANCH_NAME} -p ${branchPort}:80 Weather-Check-image-${BRANCH_NAME}"
+                    bat "docker run --rm -d --name weather-check-container-${BRANCH_NAME} -p ${branchPort}:80 weather-check-image-${BRANCH_NAME}"
 
                     echo "Container for ${BRANCH_NAME} is running on port ${branchPort}"
                 }
