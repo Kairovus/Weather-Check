@@ -1,0 +1,93 @@
+body{
+    font-family: 'arial';
+    background-color: lightgray;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wheaterForm{
+    margin: 20px;
+}
+
+.cityInput{
+    padding: 10px;
+    font-size: 2rem;
+    font-weight: bold;
+    border: 2px solid darkgray;
+    border-radius: 10px;
+    margin: 10px;
+    width: 300px;
+}
+
+button[type = "submit"]{
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 2rem;
+    background-color: limegreen;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 300MS;
+}
+
+button[type = "submit"]:hover{
+    background-color: darkgreen;
+}
+
+.card{
+    background: linear-gradient(180deg, skyblue, rgb(255, 196, 86));
+    padding: 50px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.534);
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+}
+
+h1{
+    margin-top: 0px;
+    margin-bottom: 25px;
+}
+
+p{
+    font-size: 1.5rem;
+    margin: 5px 0;
+}
+
+.city, .temperature{
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.788);
+    margin-bottom: 25px;
+}
+
+.humidity{
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.description{
+    font-style: italic;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.weatherEmoji{
+    margin: 0;
+    font-size: 7.5rem;
+}
+
+.error{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.479);
+}
+
+
+
+
+
